@@ -15,6 +15,12 @@ app.get('/profile/:name', function (req, res) {
     var nameVar = req.params.name;
     res.send(nameVar);
 });
+// define a route with optional parameter
+app.get('/profile2/:name?', function (req, res) {
+    // define a variable
+    var nameVar = req.params.name;
+    res.send(nameVar);
+});
 
 var server = app.listen(3000, function () {
     console.log('App is running...');

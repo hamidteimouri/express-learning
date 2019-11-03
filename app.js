@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+var router = require('./routes');
 
 app.set('view engine', 'ejs');
 
@@ -9,16 +10,8 @@ app.locals.pageTitle = "This is a pageTitle text from locals";
 /* Change default folder of views */
 //app.set('views', __dirname + 'new-views-folder');
 
-app.get('/', function (req, res) {
-    res.render('index', {
-        'title': 'Laraman',
-        'users': ['ali', 'ahmad'],
-    });
-});
-
-app.get('/hello-word', function (req, res) {
-    res.send('Hello world');
-});
+app.get('/', router.clientHomeIndex());
+app.get('/hello-world', router.helloWorld());
 
 
 // define a route

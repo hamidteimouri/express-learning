@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+<h1><%= title %></h1>
+<p>Welcome to
+    <%# title %>
+</p>  <!-- This is a comment in ejs-->
+
+<ul>
+    <% for (var i = 0; i < users.length; i++) { %>
+        <li>
+            <%= users[i] %>
+        </li>
+    <% } %>
+
+    <%#   %>
+</ul>
+
+
+</body>
 </html>

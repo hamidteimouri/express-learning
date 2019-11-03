@@ -1,9 +1,20 @@
 var express = require('express');
 var app = express();
 
+app.set('view engine', 'ejs');
+
 app.get('/', function (req, res) {
+    res.render('index', {
+        'title': 'Laraman',
+        'users': ['ali', 'ahmad'],
+    });
+});
+
+app.get('/hello-word', function (req, res) {
     res.send('Hello world');
 });
+
+
 // define a route
 app.get('/first', function (req, res) {
     res.send('some text here...');

@@ -3,6 +3,9 @@ var app = express();
 
 app.set('view engine', 'ejs');
 
+/* Change default folder of views */
+//app.set('views', __dirname + 'new-views-folder');
+
 app.get('/', function (req, res) {
     res.render('index', {
         'title': 'Laraman',

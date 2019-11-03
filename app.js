@@ -3,6 +3,9 @@ var app = express();
 
 app.set('view engine', 'ejs');
 
+/* Set locals variable */
+app.locals.pageTitle = "This is a pageTitle text from locals";
+
 /* Change default folder of views */
 //app.set('views', __dirname + 'new-views-folder');
 

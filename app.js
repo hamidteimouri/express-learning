@@ -10,8 +10,15 @@ app.locals.pageTitle = "This is a pageTitle text from locals";
 /* Change default folder of views */
 //app.set('views', __dirname + 'new-views-folder');
 
-app.get('/', router.clientHomeIndex());
-app.get('/hello-world', router.helloWorld());
+app.get('/', function (req, res, next) {
+    res.render('index', {
+        title: 'Express',
+        users: ['hamid', 'ali']
+    });
+});
+app.get('/hello-world', function (req, res) {
+    res.send('Hello world');
+});
 
 
 // define a route

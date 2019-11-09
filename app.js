@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 var router = require('./routes');
 
-app.set('view engine', 'ejs');
+//app.set('view engine', 'ejs');
 
 /* Set locals variable */
 app.locals.pageTitle = "This is a pageTitle text from locals";
